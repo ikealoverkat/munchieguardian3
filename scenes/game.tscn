@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://dfsv7mcqrdc0n"]
+
+[ext_resource type="Texture2D" uid="uid://cbsog8dhixegf" path="res://images/sprites/spritesheet.png" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://bx754g0ynlbb2" path="res://images/sprites/gun.png" id="2_yqjtg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwrxv"]
+atlas = ExtResource("1_uwrxv")
+region = Rect2(0, 0, 518, 482)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqjtg"]
+atlas = ExtResource("1_uwrxv")
+region = Rect2(518, 0, 518, 482)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnu2h"]
+atlas = ExtResource("1_uwrxv")
+region = Rect2(1036, 0, 518, 482)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbhrr"]
+atlas = ExtResource("1_uwrxv")
+region = Rect2(1554, 0, 518, 482)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yqjtg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwrxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqjtg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnu2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbhrr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnu2h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="game" type="Node2D"]
+
+[node name="munchieguardian" type="AnimatedSprite2D" parent="."]
+position = Vector2(5, -34)
+scale = Vector2(0.52282155, 0.5228216)
+sprite_frames = SubResource("SpriteFrames_yqjtg")
+autoplay = "default"
+frame = 1
+frame_progress = 0.78912926
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="munchieguardian"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="munchieguardian"]
+
+[node name="Gun" type="Sprite2D" parent="."]
+position = Vector2(12, -22)
+scale = Vector2(0.4277778, 0.4277778)
+texture = ExtResource("2_yqjtg")
