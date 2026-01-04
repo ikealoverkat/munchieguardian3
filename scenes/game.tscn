@@ -275,7 +275,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_iywne")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
-size = Vector2(428.44443, 428.44464)
+size = Vector2(303.4815, 357.03702)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uwrxv"]
 atlas = ExtResource("1_uwrxv")
@@ -436,7 +436,7 @@ position = Vector2(0, -5)
 script = ExtResource("3_lbhrr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="munchieguardian"]
-position = Vector2(23, 168.50003)
+position = Vector2(23.5, 169)
 scale = Vector2(0.056016594, 0.056016598)
 shape = SubResource("RectangleShape2D_iywne")
 
@@ -445,7 +445,6 @@ position = Vector2(23.493776, 168.28426)
 scale = Vector2(0.058382127, 0.059698373)
 sprite_frames = SubResource("SpriteFrames_yqjtg")
 animation = &"jumping"
-frame_progress = 0.5619525
 
 [node name="Camera2D" type="Camera2D" parent="munchieguardian"]
 position = Vector2(89.99999, 148.00003)
